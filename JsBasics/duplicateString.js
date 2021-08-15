@@ -5,6 +5,24 @@ str.split(" ").map(function(x) { return counts[x] = (counts[x] || 0)+1; });
 
 console.log(counts)
 
+let letscheck = str.split(" ").reduce((acc, val) => {
+    if (val in acc) {
+        acc[val]++
+    } else {
+        acc[val] = 1
+    }
+    return acc
+},{})
+console.log(letscheck)
+
+let dup = "vikas is a vikas mishra hello vikas"
+let filDup = dup.split(" ").reduce((acc, val) => {
+    if (acc.indexOf(val) == -1) {
+        acc.push(val)
+    }
+    return acc
+}, [])
+console.log(filDup)
 // var x = 21;
 //  var abc = function () {
 //     console.log(x);
@@ -22,9 +40,4 @@ console.log(counts)
 // }
 
 // console.log(sum(2)(2), sum(2,3))
-as= 7
-function a(){
-    console.log(as)
-    var as =5
-}
-a()
+console.log(typeof Symbol('%'))

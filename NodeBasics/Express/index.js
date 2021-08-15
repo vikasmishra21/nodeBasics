@@ -21,7 +21,7 @@ app.use(express.urlencoded({
 app.use(express.static('public'))
 app.use(helmet())
 if (app.get('env') === 'development') {
-    app.use(morgan('tiny'))
+    app.use(morgan('combined'))
     console.log('Development mode')
     // debug('hi')
 }

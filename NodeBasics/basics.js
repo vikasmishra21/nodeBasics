@@ -1,3 +1,7 @@
+const assert = require('assert').strict
+
+assert.deepStrictEqual([[[1, 2, 3]], 4, 5], [[[1, 2, '3']], 4, 5])
+
 var t;
 setInterval(function() { t = console.log("setInterval: It's been one second!"); }, 1000);
 // setTimeout(() => {

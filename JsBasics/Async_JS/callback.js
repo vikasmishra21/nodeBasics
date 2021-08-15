@@ -1,4 +1,4 @@
-console.log('Brfore')
+console.log('Before')
 getUser(1, (user) => {
     console.log('user: ', user)
     getRepositories(user.gitHubUserName, (repos) => {

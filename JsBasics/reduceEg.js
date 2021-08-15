@@ -44,3 +44,39 @@ var concatenated = [
 });
 
 console.log('reduceRight: ', concatenated);
+
+let people = [
+    { name: 'Alice', age: 21 },
+    { name: 'Max', age: 20 },
+    { name: 'Jane', age: 20 }
+  ];
+
+let groupByAge = people.reduce((acc, val) => {
+    let obj = val['age']
+    if (!acc[obj]) {
+        acc[obj] = []
+    }
+    acc[obj].push(val)
+    return acc
+}, {})
+console.log(groupByAge)
+
+let friends = [{
+    name: 'Anna',
+    books: ['Bible', 'Harry Potter'],
+    age: 21
+  }, {
+    name: 'Bob',
+    books: ['War and peace', 'Romeo and Juliet'],
+    age: 26
+  }, {
+    name: 'Alice',
+    books: ['The Lord of the Rings', 'The Shining'],
+    age: 18
+  }]
+
+let allBooks = friends.reduce((acc, val) => {
+    return [...acc, ...val.books]
+}, ['faltu me'])
+
+console.log(allBooks)

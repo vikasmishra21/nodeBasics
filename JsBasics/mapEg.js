@@ -40,6 +40,6 @@ console.log('forEach Loop: ', task_names)
 // map
 // var task_names = tasks.map((task, index, array) =>  task.name);   for one liner we can omit return
 var task_names = tasks.map((task, index, array) => {
-    return task.name;
+    return [task.name, task.duration];
 });
 console.log('map: ', task_names)
