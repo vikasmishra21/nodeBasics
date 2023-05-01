@@ -17,7 +17,7 @@ var kk = stooges.reduce((a,b) => {
     s.push(b.name)
     return s
 })
-console.log(s)
+console.log(s, kk)
 
 // (function(){
 //   var a = b = 3;

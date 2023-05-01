@@ -3,9 +3,9 @@ const router = express.Router()
 const Joi = require('joi')
 
 const courses = [
-    {id: 1, name: 'course1'},
-    {id: 2, name: 'course2'},
-    {id: 3, name: 'course3'}
+    {id: 1, name: 'Java'},
+    {id: 2, name: 'Kotlin'},
+    {id: 3, name: 'Javascript'}
 ]
 
 router.get('/', (req, res) => {
@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id))
-    if (!course) return res.status(404).send('The course with the given id does not exists.')
+    if (!course) return res.status(404).send('The course with the given id does not exists in this.')
 
     const { error } = validateCourse(req.body)
     if (error) return res.status(404).send(error.details[0].message)

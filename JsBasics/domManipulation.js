@@ -3,3 +3,5 @@ function fun() {
     var kk = confirm(headingtext)
     console.log(kk)
 }
+const foo = null ?? 'default string';
+console.log(foo);

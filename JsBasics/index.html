@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="domManipulation.js"></script>
+    <script src="nullishCoalescing.js"></script>
 </head>
+
 <body>
     <button id="btn" onclick="fun()" style="background-color: yellowgreen;">click</button>
+    <a href="javascript:void(0);">
+        Click here to do nothing
+    </a>
+    <br>
+    <a href="javascript:void(document.body.style.backgroundColor='green');">
+        Click here for green background
+    </a>
+
     <h1 id="heading">This is sample heading</h1>
 </body>
+
 </html>
