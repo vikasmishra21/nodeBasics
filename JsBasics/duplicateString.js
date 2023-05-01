@@ -41,3 +41,11 @@ console.log(filDup)
 
 // console.log(sum(2)(2), sum(2,3))
 console.log(typeof Symbol('%'))
+let arr = [4,3,3,1]
+let resArr= arr.reduce((acc, val) => {
+    if (acc.indexOf(val) == -1) {
+        acc.push(val)
+    }
+    return acc
+}, [])
+console.log(resArr)
